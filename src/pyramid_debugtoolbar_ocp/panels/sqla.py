@@ -56,10 +56,8 @@ try:
                 engines[id(conn.engine)] = weakref.ref(conn.engine)
                 queries = request.ocp_pdtb_sqla_queries
 
-                cubes_engines = request.registry.sqla_engines.get('cubes_engines')
-                ocp_named_engines = dict([(id(v), k) for k, v in request.registry.sqla_engines.items() if k != 'cubes_engines'])
-                cubes_engines = dict([(id(v), k) for k,v in cubes_engines.items()])
-                ocp_named_engines.update(cubes_engines)
+                ocp_engines = getattr(request.registry, 'sqla_engines', {})
+                ocp_named_engines = dict([(id(v), k) for k, v in ocp_engines.items()])
 
                 duration = (stop_timer - conn.info.get('ocp_pdtb_start_timer', 0)) * 1000
 

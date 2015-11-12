@@ -1,4 +1,4 @@
-__version__ = "15.0.0"
+__version__ = "15.1.0"
 
 __title__ = "pyramid_debugtoolbar_ocp"
 __description__ = "OCP pyramid debug toolbar customizations"
