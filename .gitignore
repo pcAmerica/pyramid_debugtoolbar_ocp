@@ -1,0 +1,8 @@
+.coverage*
+.tox
+pyramid_debugtoolbar_ocp.egg-info
+htmlcov
+dist
+docs/_build
+*.pyc
+.cache

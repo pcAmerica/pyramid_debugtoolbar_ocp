@@ -1,0 +1,2 @@
+include *.rst *.txt LICENSE
+include pyramid_debugtoolbar_ocp/panels/templates/*
